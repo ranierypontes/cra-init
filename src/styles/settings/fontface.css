@@ -1,0 +1,70 @@
+@font-face {
+  font-family: "SofiaPro";
+  font-style: normal;
+  font-weight: 200;
+  src: local("SofiaPro"), local("SofiaPro-UltraLight"),
+    url("../../assets/fonts/SofiaPro/SofiaPro-UltraLight.woff2") format("woff2"),
+    url("../../assets/fonts/SofiaPro/SofiaPro-UltraLight.woff") format("woff");
+}
+
+@font-face {
+  font-family: "SofiaPro";
+  font-style: normal;
+  font-weight: 300;
+  src: local("SofiaPro"), local("SofiaPro-Light"),
+    url("../../assets/fonts/SofiaPro/SofiaPro-Light.woff2") format("woff2"),
+    url("../../assets/fonts/SofiaPro/SofiaPro-Light.woff") format("woff");
+}
+
+@font-face {
+  font-family: "SofiaPro";
+  font-style: normal;
+  font-weight: normal;
+  src: local("SofiaPro"), local("SofiaPro"),
+    url("../../assets/fonts/SofiaPro/SofiaPro.woff2") format("woff2"),
+    url("../../assets/fonts/SofiaPro/SofiaPro.woff") format("woff");
+}
+
+@font-face {
+  font-family: "SofiaPro";
+  font-style: normal;
+  font-weight: 500;
+  src: local("SofiaPro"), local("SofiaPro-Medium"),
+    url("../../assets/fonts/SofiaPro/SofiaPro-Medium.woff2") format("woff2"),
+    url("../../assets/fonts/SofiaPro/SofiaPro-Medium.woff") format("woff");
+}
+
+@font-face {
+  font-family: "SofiaPro";
+  font-style: normal;
+  font-weight: 600;
+  src: local("SofiaPro"), local("SofiaPro-SemiBold"),
+    url("../../assets/fonts/SofiaPro/SofiaPro-SemiBold.woff2") format("woff2"),
+    url("../../assets/fonts/SofiaPro/SofiaPro-SemiBold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "SofiaPro";
+  font-style: normal;
+  font-weight: bold;
+  src: local("SofiaPro"), local("SofiaPro-Bold"),
+    url("../../assets/fonts/SofiaPro/SofiaPro-Bold.woff2") format("woff2"),
+    url("../../assets/fonts/SofiaPro/SofiaPro-Bold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "SofiaPro";
+  font-style: normal;
+  font-weight: 900;
+  src: local("SofiaPro"), local("SofiaPro-Black"),
+    url("../../assets/fonts/SofiaPro/SofiaPro-Black.woff2") format("woff2"),
+    url("../../assets/fonts/SofiaPro/SofiaPro-Black.woff") format("woff");
+}
+
+body {
+  font-family: "SofiaPro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol";
+  font-weight: normal;
+  font-size: 100%;
+}

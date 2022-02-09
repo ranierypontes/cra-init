@@ -1,24 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { BrowserRouter } from "react-router-dom";
+import { ToastContainer } from "react-toastify";
+
+import ErrorBoundary from "./pages/ErrorBoundary";
+// import { AuthProvider, UserProvider, MenuProvider } from "./contexts/all";
+import Routes from "./routes";
+
+import "./styles/vendors/bootstrap.scss";
+import GlobalStyles from "./styles/globalStyles";
+import "./styles/settings/fontface.css";
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <GlobalStyles />
+      <ErrorBoundary>
+        <ToastContainer />
+        <BrowserRouter>
+          {/* <AuthProvider> */}
+          {/* <UserProvider> */}
+          {/* <MenuProvider> */}
+          <Routes />
+          {/* </MenuProvider> */}
+          {/* </UserProvider> */}
+          {/* </AuthProvider> */}
+        </BrowserRouter>
+      </ErrorBoundary>
+    </>
   );
 }
 
