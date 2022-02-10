@@ -14,7 +14,7 @@ export const FormDefault = styled.form`
     flex-direction: column;
 
     &:not(:last-of-type) {
-      margin-bottom: 25px;
+      margin-bottom: 22px;
     }
 
     &.-right {
@@ -25,37 +25,27 @@ export const FormDefault = styled.form`
     }
 
     .error-message {
-      margin-top: 8px;
-      margin-left: 5px;
+      margin-top: 5px;
+      /* margin-left: 10px; */
       font-weight: 300;
       display: block;
       font-size: ${typography.extraSmaller};
       color: ${colors.danger2};
     }
-
-    /* &.-checkbox {
-      display: flex;
-      align-items: center;
-      justify-content: flex-start;
-    } */
   }
 
-  .form-check {
-    margin-bottom: 15px;
+  .checkbox-wrapper {
+    display: flex;
+    align-items: center;
 
-    .text {
-      font-weight: normal;
-      color: ${colors.grayscale6};
-      margin-left: 5px;
+    .label {
+      margin: 4px 0 0 8px;
+      padding: 0;
     }
 
-    .error-message {
-      margin-top: 8px;
-      margin-left: 5px;
-      font-weight: 300;
-      display: block;
-      font-size: ${typography.extraSmaller};
-      color: ${colors.danger2};
+    .link {
+      color: ${colors.c1};
+      font-weight: normal;
     }
   }
 
@@ -80,41 +70,40 @@ export const FormDefault = styled.form`
   .label {
     line-height: 1;
     margin-bottom: 8px;
+    font-size: ${typography.smaller};
+    font-weight: 300;
 
     &.-custom {
       color: ${colors.c6};
-      font-size: ${typography.smaller};
     }
   }
 
   .form-control {
-    /* font-family: "Gilroy"; */
     display: block;
     width: 100%;
-    height: 46px;
+    height: 40px;
     padding-left: 15px;
     padding-right: 15px;
-    color: ${colors.grayscale6};
+    color: ${colors.black};
     background-color: ${colors.grayscale1};
-    font-weight: normal;
-    border: 2px solid ${colors.grayscale1};
+    font-weight: 300;
+    border: 1px solid ${colors.grayscale1};
     font-size: ${typography.default};
     border-radius: 4px;
     outline: none;
     transition: all ease 0.2s;
 
-    &:not(:last-of-type) {
+    /* &:not(:last-of-type) {
       margin-bottom: 15px;
-    }
+    } */
 
     &::placeholder {
       color: ${lighten(0.25, colors.grayscale5)};
-      font-weight: normal;
+      font-weight: 300;
     }
 
     &:focus {
       border-color: ${colors.c1};
-      color: ${colors.c1};
     }
 
     &:disabled {

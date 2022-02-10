@@ -18,15 +18,11 @@ api.interceptors.request.use((config) => {
 //   (response) => {
 //     // Qualquer código de status que esteja dentro de 2xx fará com que essa função seja acionada
 //     // Faça algo com os dados de resposta
-//     // alert(response);
 //     return response;
 //   },
 //   (error) => {
 //     // Quaisquer códigos de status que estejam fora de 2xx fazem com que esta função seja acionada
 //     // Faça algo com erro de resposta
-//     // if (error.response.data.status === 401) {
-//     //   error.response.data.unauthorizedRedirectTo = "/entrar";
-//     // }
 //     return Promise.reject(error);
 //   }
 // );

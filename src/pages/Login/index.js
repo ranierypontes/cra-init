@@ -3,9 +3,9 @@ import React from "react";
 // import withReactContent from "sweetalert2-react-content";
 // import { useNavigate } from "react-router-dom";
 
-import Container from "../../styles/settings/container";
+// import Container from "../../styles/settings/container";
 import { CardAuth, Typography, FormLogin } from "../../components/All";
-import example from "../../assets/images/img-example.jpg";
+// import example from "../../assets/images/img-example.jpg";
 import * as S from "./styles";
 
 const PageLogin = ({ accountConfirmation }) => {
@@ -39,7 +39,7 @@ const PageLogin = ({ accountConfirmation }) => {
           <h1 className="visually-hidden">Entrar</h1>
         </header>
         <S.SectionContent className="s-content">
-          <Container>
+          <div className="container">
             <CardAuth className="card">
               <div className="c-header">
                 <Typography className="c-title" as="span" $size="6">
@@ -47,11 +47,8 @@ const PageLogin = ({ accountConfirmation }) => {
                 </Typography>
                 <FormLogin />
               </div>
-              <div className="c-content">
-                <img className="img" src={example} alt="Conectado" />
-              </div>
             </CardAuth>
-          </Container>
+          </div>
         </S.SectionContent>
       </S.Section>
     </main>

@@ -18,7 +18,7 @@ const buttonVariations = {
     }
 
     /* Default Outline */
-    ${(props) =>
+    /* ${(props) =>
       props.outline &&
       css`
         color: ${colors.grayscale5};
@@ -35,10 +35,10 @@ const buttonVariations = {
           background-color: transparent;
           border-color: ${lighten(0.25, colors.grayscale4)};
         }
-      `}
+      `} */
 
     /* Default Transparent */
-    ${(props) =>
+    /* ${(props) =>
       props.transparent &&
       css`
         color: ${colors.grayscale5};
@@ -52,7 +52,7 @@ const buttonVariations = {
           background-color: transparent;
           border-color: transparent;
         }
-      `}
+      `} */
   `,
   primary: css`
     color: ${colors.white};
@@ -69,7 +69,7 @@ const buttonVariations = {
     }
 
     /* Primary Outline */
-    ${(props) =>
+    /* ${(props) =>
       props.outline &&
       css`
         color: ${colors.c1};
@@ -86,10 +86,10 @@ const buttonVariations = {
           background-color: transparent;
           border-color: ${lighten(0.15, colors.c1)};
         }
-      `}
+      `} */
 
     /* Primary Outline Filled On Hover */
-    ${(props) =>
+    /* ${(props) =>
       props.outlineFilledOnHover &&
       css`
         color: ${colors.c1};
@@ -106,10 +106,10 @@ const buttonVariations = {
           background-color: ${lighten(0.09, colors.c1)};
           border-color: ${lighten(0.09, colors.c1)};
         }
-      `}
+      `} */
 
     /* Primary Transparent */
-    ${(props) =>
+    /* ${(props) =>
       props.transparent &&
       css`
         color: ${colors.c1};
@@ -128,7 +128,7 @@ const buttonVariations = {
           background-color: transparent;
           border-color: transparent;
         }
-      `}
+      `} */
   `,
   success: css`
     color: ${colors.white};

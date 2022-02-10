@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 import { colors } from "../../../styles/settings/colors";
 import { breakpoints, sizes } from "../../../styles/settings/breakpoints";
+import { typography } from "../../../styles/settings/typography";
 
 import { FormDefault } from "../Default";
 
@@ -10,9 +11,10 @@ export const Form = styled(FormDefault)`
     .paragraph {
       line-height: 1.3;
       font-weight: 300;
+      font-size: ${typography.smaller};
       .link {
         color: ${colors.c1};
-        font-weight: 500;
+        font-weight: normal;
         @media ${breakpoints.lessThan(sizes.phone)} {
           display: block;
         }
@@ -22,11 +24,5 @@ export const Form = styled(FormDefault)`
     &.-center {
       text-align: center;
     }
-  }
-
-  .btn-temp {
-    display: flex;
-    align-items: center;
-    justify-content: center;
   }
 `;

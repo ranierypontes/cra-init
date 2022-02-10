@@ -3,36 +3,37 @@ import { Formik } from "formik";
 import * as Yup from "yup";
 import { Link as RouterLink } from "react-router-dom";
 
-import { useAuth } from "../../../contexts/all";
+// import { useAuth } from "../../../contexts/all";
 
 import { Button } from "../../../components/All";
 import * as S from "./styled";
 
 const FormLogin = () => {
-  const { signIn } = useAuth();
+  // const { signIn } = useAuth();
 
   const initialValues = {
-    loginEmail: "",
-    loginPassword: "",
+    email: "",
+    password: "",
   };
 
   const validationSchema = Yup.object().shape({
-    loginEmail: Yup.string()
+    email: Yup.string()
       .required("Campo obrigatório")
       .matches(
         // eslint-disable-next-line no-useless-escape
         /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
         "Digite um email válido"
       ),
-    loginPassword: Yup.string().required("Campo obrigatório"),
+    password: Yup.string().required("Campo obrigatório"),
   });
 
   const formOnSubmit = (values, { setSubmitting }) => {
-    const auth = {
-      username: values.loginEmail,
-      password: values.loginPassword,
-    };
-    signIn(auth, setSubmitting);
+    console.log(values);
+    // const auth = {
+    //   username: values.loginEmail,
+    //   password: values.loginPassword,
+    // };
+    // signIn(auth, setSubmitting);
   };
 
   return (
@@ -54,48 +55,46 @@ const FormLogin = () => {
       }) => (
         <S.Form autoComplete="off" onSubmit={handleSubmit}>
           <div className="form-group">
-            <label className="label" htmlFor="id_loginEmail">
+            <label className="label" htmlFor="email">
               Email
             </label>
             <input
               className={`form-control ${
-                touched.loginEmail && errors.loginEmail ? "-is-invalid" : ""
+                touched.email && errors.email ? "-is-invalid" : ""
               }`}
-              id="id_loginEmail"
-              name="loginEmail"
+              id="email"
+              name="email"
               placeholder="email@email.com"
               type="email"
-              value={values.loginEmail}
+              value={values.email}
               onChange={handleChange}
               onBlur={handleBlur}
             />
 
-            {touched.loginEmail && errors.loginEmail && (
-              <span className="error-message">{errors.loginEmail}</span>
+            {touched.email && errors.email && (
+              <span className="error-message">{errors.email}</span>
             )}
           </div>
 
           <div className="form-group">
-            <label className="label" htmlFor="id_loginPassword">
+            <label className="label" htmlFor="password">
               Senha
             </label>
             <input
               className={`form-control ${
-                touched.loginPassword && errors.loginPassword
-                  ? "-is-invalid"
-                  : ""
+                touched.password && errors.password ? "-is-invalid" : ""
               }`}
-              id="id_loginPassword"
-              name="loginPassword"
+              id="password"
+              name="password"
               placeholder="●●●●●●●●●●●"
               type="password"
-              value={values.loginPassword}
+              value={values.password}
               onChange={handleChange}
               onBlur={handleBlur}
             />
 
-            {touched.loginPassword && errors.loginPassword && (
-              <span className="error-message">{errors.loginPassword}</span>
+            {touched.password && errors.password && (
+              <span className="error-message">{errors.password}</span>
             )}
           </div>
 

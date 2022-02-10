@@ -6,7 +6,7 @@ import { typography } from "../../styles/settings/typography";
 const buttonSizes = {
   default: css`
     padding: ${(props) => (props.noPadding ? "2px" : "0 30px")};
-    height: ${(props) => (props.noPadding ? "auto" : "46px")};
+    height: ${(props) => (props.noPadding ? "auto" : "40px")};
     letter-spacing: ${(props) =>
       props.$letterSpacing ? props.$letterSpacing : "0.5px"};
     font-size: ${(props) =>

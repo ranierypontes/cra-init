@@ -4,9 +4,9 @@ import React, { Suspense } from "react";
 import { SpinLoading } from "../components/All";
 // import { PageNotFound } from "../pages/All";
 
+const PagePlayground = React.lazy(() => import("../pages/Playground"));
 const PageLogin = React.lazy(() => import("../pages/Login"));
-// const PageRegister = React.lazy(() => import("../pages/Register"));
-// const PagePlayground = React.lazy(() => import("../pages/Playground"));
+const PageRegister = React.lazy(() => import("../pages/Register"));
 
 const PublicRoutes = () => {
   // let location = useLocation();
@@ -32,14 +32,14 @@ const PublicRoutes = () => {
         </Suspense>
       ),
     },
-    // {
-    //   path: "/cadastrar",
-    //   element: (
-    //     <Suspense fallback={<SpinLoading fullscreen />}>
-    //       <PageRegister />
-    //     </Suspense>
-    //   ),
-    // },
+    {
+      path: "/cadastrar",
+      element: (
+        <Suspense fallback={<SpinLoading fullscreen />}>
+          <PageRegister />
+        </Suspense>
+      ),
+    },
     // {
     //   path: "/login/confirmacao",
     //   element: (
@@ -48,14 +48,14 @@ const PublicRoutes = () => {
     //     </Suspense>
     //   ),
     // },
-    // {
-    //   path: "/playground",
-    //   element: (
-    //     <Suspense fallback={<SpinLoading fullscreen />}>
-    //       <PagePlayground />
-    //     </Suspense>
-    //   ),
-    // },
+    {
+      path: "/playground",
+      element: (
+        <Suspense fallback={<SpinLoading fullscreen />}>
+          <PagePlayground />
+        </Suspense>
+      ),
+    },
     // {
     //   path: "/*",
     //   element: <Navigate to="/entrar" replace />,
