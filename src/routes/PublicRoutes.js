@@ -5,8 +5,14 @@ import { SpinLoading } from "../components/All";
 // import { PageNotFound } from "../pages/All";
 
 const PagePlayground = React.lazy(() => import("../pages/Playground"));
-const PageLogin = React.lazy(() => import("../pages/Login"));
-const PageRegister = React.lazy(() => import("../pages/Register"));
+const PageLogin = React.lazy(() => import("../pages/Auth/Login"));
+const PageRegister = React.lazy(() => import("../pages/Auth/Register"));
+const PageForgotPassword = React.lazy(() =>
+  import("../pages/Auth/ForgotPassword")
+);
+const PageResetPassword = React.lazy(() =>
+  import("../pages/Auth/ResetPassword")
+);
 
 const PublicRoutes = () => {
   // let location = useLocation();
@@ -37,6 +43,22 @@ const PublicRoutes = () => {
       element: (
         <Suspense fallback={<SpinLoading fullscreen />}>
           <PageRegister />
+        </Suspense>
+      ),
+    },
+    {
+      path: "/esqueci-minha-senha",
+      element: (
+        <Suspense fallback={<SpinLoading fullscreen />}>
+          <PageForgotPassword />
+        </Suspense>
+      ),
+    },
+    {
+      path: "/resetar-senha",
+      element: (
+        <Suspense fallback={<SpinLoading fullscreen />}>
+          <PageResetPassword />
         </Suspense>
       ),
     },

@@ -67,6 +67,8 @@ export { default as CardAuth } from "../Card/Auth";
 // // Forms
 export { default as FormLogin } from "../Form/Login";
 export { default as FormRegister } from "../Form/Register";
+export { default as FormForgotPassword } from "../Form/ForgotPassword";
+export { default as FormResetPassword } from "../Form/ResetPassword";
 // export { default as FormOpenCall } from "../Form/OpenCall";
 // export { default as FormDeposit } from "../Form/Deposit";
 // export { default as FormAccountCredentials } from "../Form/AccountCredentials";

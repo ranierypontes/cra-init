@@ -71,6 +71,7 @@ const GlobalStyles = createGlobalStyle`
   a {
     text-decoration-skip-ink: auto;
     text-decoration: none;
+    transition: opacity ease 0.2s;
   }
 
   /* Make images easier to work with */

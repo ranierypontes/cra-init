@@ -1,6 +1,6 @@
 import styled from "styled-components";
 // import { between } from "polished";
-import { colors } from "../../styles/settings/colors";
+import { colors } from "../../../styles/settings/colors";
 // import { breakpoints, sizes } from "../../styles/settings/breakpoints";
 // import { Link as RouterLink } from "react-router-dom";
 

@@ -1,6 +1,8 @@
 export { default as PagePlayground } from "../Playground";
 export { default as PageLogin } from "../Login";
 export { default as PageRegister } from "../Register";
+export { default as PageForgotPassword } from "../ForgotPassword";
+export { default as PageResetPassword } from "../ResetPassword";
 // export { default as PageDashboard } from "../Dashboard";
 // export { default as PageRendimentos } from "../Rendimentos";
 // export { default as PageDepositar } from "../Depositar";

@@ -4,7 +4,7 @@ import React from "react";
 // import { useNavigate } from "react-router-dom";
 
 // import Container from "../../styles/settings/container";
-import { CardAuth, Typography, FormLogin } from "../../components/All";
+import { CardAuth, Typography, FormLogin } from "../../../components/All";
 // import example from "../../assets/images/img-example.jpg";
 import * as S from "./styles";
 

@@ -1,6 +1,6 @@
 import React from "react";
 
-import { CardAuth, Typography, FormRegister } from "../../components/All";
+import { CardAuth, Typography, FormRegister } from "../../../components/All";
 import * as S from "./styles";
 
 const PageRegister = () => (

@@ -100,6 +100,7 @@ export const FormDefault = styled.form`
     &::placeholder {
       color: ${lighten(0.25, colors.grayscale5)};
       font-weight: 300;
+      font-size: ${typography.smaller};
     }
 
     &:focus {
