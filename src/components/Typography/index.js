@@ -36,7 +36,7 @@ const fontColors = {
     color: ${colors.grayscale7};
   `,
   1: css`
-    color: ${colors.c1};
+    color: ${(props) => props.theme.colors.primary}; ;
   `,
   2: css`
     color: ${colors.c2};

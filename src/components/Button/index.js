@@ -10,6 +10,7 @@ import buttonVariations from "./variations";
 export const Button = styled.button.attrs((props) => ({
   type: props.type ? props.type : "button",
 }))`
+  position: relative;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -35,7 +36,7 @@ export const Button = styled.button.attrs((props) => ({
   ${(props) =>
     props.disabled &&
     css`
-      opacity: 0.5;
+      opacity: 0.7;
       pointer-events: none;
     `}
 
@@ -71,14 +72,17 @@ export const Button = styled.button.attrs((props) => ({
     ${(props) =>
     props.isLoading &&
     css`
+      opacity: 0.7;
+      pointer-events: none;
       &::after {
         content: "";
         z-index: 50;
         position: absolute;
-        width: 25px;
-        height: 25px;
+        /* right: 10px; */
+        width: 20px;
+        height: 20px;
         border-radius: 50%;
-        border: 2px solid ${colors.white};
+        border: 1px solid ${colors.white};
         border-top-color: transparent;
         animation: ${rotateAnim} 0.6s linear infinite;
       }
