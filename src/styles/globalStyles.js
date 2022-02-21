@@ -1,5 +1,4 @@
 import { createGlobalStyle } from "styled-components";
-import { colors } from "./settings/colors";
 
 const GlobalStyles = createGlobalStyle`
 
@@ -58,7 +57,7 @@ const GlobalStyles = createGlobalStyle`
     /* line-height: 1.5; */
     overflow-x: hidden;
     overflow-y: auto;
-    background-color: ${colors.white};
+    background-color: ${(props) => props.theme.colors.bgWhite};
   }
 
   /* Remove list styles on ul and ol elements */

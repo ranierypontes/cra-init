@@ -8,32 +8,33 @@ const CustomThemeContext = createContext({});
 export function CustomThemeProvider({ children }) {
   const [theme, setTheme] = useState(combineTheme(light));
 
-  // Toggle theme
-  // const toggleTheme = () => {
-  // 	setTheme(theme.title === 'light' ? combineTheme(dark) : combineTheme(light))
-  // 	let themeMode =
-  // 		theme.title === 'light' ? (theme.title = 'dark') : (theme.title = 'light')
-  // 	localStorage.setItem('*cra_init_theme*', themeMode)
-  // }
+  // Toggle Dark Theme
+  const toggleDarkTheme = () => {
+    if (theme.title === "light") {
+      setTheme(combineTheme(dark));
+      localStorage.setItem("*cra_init_theme*", "dark");
+    } else {
+      setTheme(combineTheme(light));
+      localStorage.setItem("*cra_init_theme*", "light");
+    }
+  };
 
-  // Get theme on Local Storage
+  // Get theme on local storage
   useEffect(() => {
-    console.log("setTheme based on localStorage!");
-
     if (localStorage.getItem("*cra_init_theme*") !== null) {
       let getStorage = localStorage.getItem("*cra_init_theme*");
 
-      if (getStorage === "dark") {
-        setTheme(combineTheme(dark));
-      } else {
+      if (getStorage === "light") {
         setTheme(combineTheme(light));
+      } else {
+        setTheme(combineTheme(dark));
       }
     }
   }, []);
 
   return (
     <ThemeProvider theme={theme}>
-      <CustomThemeContext.Provider value={setTheme}>
+      <CustomThemeContext.Provider value={{ toggleDarkTheme }}>
         {children}
       </CustomThemeContext.Provider>
     </ThemeProvider>

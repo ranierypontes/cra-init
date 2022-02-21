@@ -1,15 +1,15 @@
 import React from "react";
 
+import { useCustomTheme } from "../../contexts/all";
 import { Typography, Button } from "../../components/All";
-import { useTheme } from "styled-components";
-// import { IconChat } from "../../components/Icons";
-
 import * as S from "./styles";
 
 const PagePlayground = () => {
-  const theme = useTheme();
+  const { toggleDarkTheme } = useCustomTheme();
 
-  console.log("Current theme: ", theme);
+  const handleToggleTheme = () => {
+    toggleDarkTheme();
+  };
 
   return (
     <S.Section>
@@ -17,21 +17,22 @@ const PagePlayground = () => {
         <Typography
           className="s-title"
           as="h1"
-          $color="8"
           $size="6"
           $uppercase
-          $fontWeight="normal"
+          $fontWeight="600"
         >
           Playground
         </Typography>
       </header>
       <div className="s-content">
         <div className="box">
-          <Button variation="success">ToggleTheme</Button>
+          <Button variation="success" onClick={handleToggleTheme}>
+            Toggle Dark Theme
+          </Button>
         </div>
 
         <div className="box -title">
-          <Typography as="h2" $size="5" $color="8">
+          <Typography as="h2" $size="5" $fontWeight="500">
             Button
           </Typography>
         </div>
@@ -40,15 +41,45 @@ const PagePlayground = () => {
           <Button>Button</Button>
           <Button variation="primary">Button</Button>
         </div>
-        <div className="box">
-          <Typography
-            className="s-title"
-            as="p"
-            $color="1"
-            $size="6"
-            $fontWeight="normal"
-          >
+
+        <div className="box -title">
+          <Typography as="h2" $size="5">
             Typography
+          </Typography>
+        </div>
+
+        <div className="box">
+          <Typography as="p" $size="1" $fontWeight="300">
+            Lorem Ipsum
+          </Typography>
+          <Typography as="p">Lorem ipsum</Typography>
+          <Typography as="p" $color="1" $size="6" $fontWeight="500">
+            Lorem ipsum
+          </Typography>
+          <Typography
+            as="p"
+            $color="5"
+            $size="7"
+            $fontWeight="500"
+            $letterSpacing="2px"
+            $uppercase
+          >
+            Lorem ipsum
+          </Typography>
+        </div>
+
+        <div className="box">
+          <Typography as="p" $color="info">
+            Info
+          </Typography>
+          <Typography as="p" $color="success">
+            Success
+          </Typography>
+          <Typography as="p" $color="warning">
+            Warning
+          </Typography>
+          <Typography as="p" $color="danger">
+            Danger
           </Typography>
         </div>
       </div>

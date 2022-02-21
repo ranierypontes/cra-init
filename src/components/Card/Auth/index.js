@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { rgba } from "polished";
 import { colors } from "../../../styles/settings/colors";
 import { breakpoints, sizes } from "../../../styles/settings/breakpoints";
-import { typography } from "../../../styles/settings/typography";
+// import { typography } from "../../../styles/settings/ttypography";
 
 const CardAuth = styled.div`
   margin: 0 auto;
@@ -39,7 +39,7 @@ const CardAuth = styled.div`
       }
       @media ${breakpoints.lessThan("420px")} {
         margin-bottom: 20px;
-        font-size: ${typography.medium};
+        font-size: ${(props) => props.theme.fontSize.medium};
       }
     }
   }

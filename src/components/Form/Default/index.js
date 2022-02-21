@@ -3,7 +3,7 @@ import { lighten } from "polished";
 
 import { breakpoints, sizes } from "../../../styles/settings/breakpoints";
 import { colors } from "../../../styles/settings/colors";
-import { typography } from "../../../styles/settings/typography";
+// import { typography } from "../../../styles/settings/ttypography";
 
 export const FormDefault = styled.form`
   .form-group {
@@ -29,7 +29,7 @@ export const FormDefault = styled.form`
       /* margin-left: 10px; */
       font-weight: 300;
       display: block;
-      font-size: ${typography.extraSmaller};
+      font-size: ${(props) => props.theme.fontSize.extraSmaller};
       color: ${colors.danger2};
     }
   }
@@ -70,7 +70,7 @@ export const FormDefault = styled.form`
   .label {
     line-height: 1;
     margin-bottom: 8px;
-    font-size: ${typography.smaller};
+    font-size: ${(props) => props.theme.fontSize.extraSmaller};
     font-weight: 300;
 
     &.-custom {
@@ -88,7 +88,7 @@ export const FormDefault = styled.form`
     background-color: ${colors.grayscale1};
     font-weight: 300;
     border: 1px solid ${colors.grayscale1};
-    font-size: ${typography.default};
+    font-size: ${(props) => props.theme.fontSize.default};
     border-radius: 4px;
     outline: none;
     transition: all ease 0.2s;
@@ -100,7 +100,7 @@ export const FormDefault = styled.form`
     &::placeholder {
       color: ${lighten(0.25, colors.grayscale5)};
       font-weight: 300;
-      font-size: ${typography.smaller};
+      font-size: ${(props) => props.theme.fontSize.smaller};
     }
 
     &:focus {
@@ -138,7 +138,7 @@ export const FormDefault = styled.form`
     } */
 
     &.-custom {
-      font-size: ${typography.smaller};
+      font-size: ${(props) => props.theme.fontSize.smaller};
       font-weight: normal;
     }
   }

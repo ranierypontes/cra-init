@@ -1,93 +1,90 @@
 import styled, { css } from "styled-components";
 import PropTypes from "prop-types";
 
-import { colors } from "../../styles/settings/colors";
-import { typography } from "../../styles/settings/typography";
-
 const fontColors = {
   default: css`
-    color: ${colors.c4};
+    color: ${(props) => props.theme.colors.textDefault};
   `,
   white: css`
-    color: ${colors.white};
+    color: ${(props) => props.theme.colors.white};
   `,
   black: css`
-    color: ${colors.black};
+    color: ${(props) => props.theme.colors.black};
   `,
   gray1: css`
-    color: ${colors.grayscale1};
+    color: ${(props) => props.theme.colors.gray1};
   `,
   gray2: css`
-    color: ${colors.grayscale2};
+    color: ${(props) => props.theme.colors.gray2};
   `,
   gray3: css`
-    color: ${colors.grayscale3};
+    color: ${(props) => props.theme.colors.gray3};
   `,
   gray4: css`
-    color: ${colors.grayscale4};
+    color: ${(props) => props.theme.colors.gray4};
   `,
   gray5: css`
-    color: ${colors.grayscale5};
+    color: ${(props) => props.theme.colors.gray5};
   `,
   gray6: css`
-    color: ${colors.grayscale6};
+    color: ${(props) => props.theme.colors.gray6};
   `,
   gray7: css`
-    color: ${colors.grayscale7};
+    color: ${(props) => props.theme.colors.gray7};
   `,
   1: css`
-    color: ${(props) => props.theme.colors.primary}; ;
+    color: ${(props) => props.theme.colors.c1};
   `,
   2: css`
-    color: ${colors.c2};
+    color: ${(props) => props.theme.colors.c2};
   `,
   3: css`
-    color: ${colors.c3};
+    color: ${(props) => props.theme.colors.c3};
   `,
   4: css`
-    color: ${colors.c4};
+    color: ${(props) => props.theme.colors.c4};
   `,
   5: css`
-    color: ${colors.c5};
+    color: ${(props) => props.theme.colors.c5};
   `,
   6: css`
-    color: ${colors.c6};
+    color: ${(props) => props.theme.colors.c6};
   `,
   7: css`
-    color: ${colors.c7};
+    color: ${(props) => props.theme.colors.c7};
   `,
   8: css`
-    color: ${colors.c8};
+    color: ${(props) => props.theme.colors.c8};
   `,
   9: css`
-    color: ${colors.c9};
+    color: ${(props) => props.theme.colors.c9};
   `,
   success: css`
-    color: ${colors.success};
+    color: ${(props) => props.theme.colors.success};
   `,
   success2: css`
-    color: ${colors.success2};
+    color: ${(props) => props.theme.colors.success2};
   `,
   danger: css`
-    color: ${colors.danger};
+    color: ${(props) => props.theme.colors.danger};
   `,
   danger2: css`
-    color: ${colors.danger2};
+    color: ${(props) => props.theme.colors.danger2};
   `,
   info: css`
-    color: ${colors.info};
+    color: ${(props) => props.theme.colors.info};
   `,
   warning: css`
-    color: ${colors.warning};
+    color: ${(props) => props.theme.colors.warning};
   `,
   warning2: css`
-    color: ${colors.warning2};
+    color: ${(props) => props.theme.colors.warning2};
   `,
 };
 
 const fontSizes = {
   default: css`
-    font-size: ${typography.default};
+    font-size: ${(props) => props.theme.fontSize.default};
 
     .icon {
       width: 16px;
@@ -95,66 +92,73 @@ const fontSizes = {
     }
   `,
   1: css`
-    font-size: ${typography.superSmaller};
+    font-size: ${(props) => props.theme.fontSize.superSmaller};
     .icon {
       width: 14px;
       height: 14px;
     }
   `,
   2: css`
-    font-size: ${typography.extraSmaller};
+    font-size: ${(props) => props.theme.fontSize.extraSmaller};
     .icon {
       width: 14px;
       height: 14px;
     }
   `,
   3: css`
-    font-size: ${typography.smaller};
+    font-size: ${(props) => props.theme.fontSize.smaller};
     .icon {
       width: 16px;
       height: 16px;
     }
   `,
   4: css`
-    font-size: ${typography.default};
+    font-size: ${(props) => props.theme.fontSize.default};
     .icon {
       width: 16px;
       height: 16px;
     }
   `,
   5: css`
-    font-size: ${typography.medium};
+    font-size: ${(props) => props.theme.fontSize.medium};
     .icon {
       width: 18px;
       height: 18px;
     }
   `,
   6: css`
-    font-size: ${typography.large};
+    font-size: ${(props) => props.theme.fontSize.large};
     .icon {
       width: 19px;
       height: 19px;
     }
   `,
   7: css`
-    font-size: ${typography.extraLarge};
+    font-size: ${(props) => props.theme.fontSize.extraLarge};
     .icon {
       width: 20px;
       height: 20px;
     }
   `,
   8: css`
-    font-size: ${typography.superLarge};
+    font-size: ${(props) => props.theme.fontSize.superLarge};
     .icon {
       width: 21px;
-      height: 1px;
+      height: 21px;
+    }
+  `,
+  9: css`
+    font-size: ${(props) => props.theme.fontSize.ultraLarge};
+    .icon {
+      width: 22px;
+      height: 22px;
     }
   `,
 };
 
 export const Typography = styled.p`
   line-height: ${(props) => (props.$lineHeight ? props.$lineHeight : "1.1")};
-  font-weight: ${(props) => (props.$fontWeight ? props.$fontWeight : "600")};
+  font-weight: ${(props) => (props.$fontWeight ? props.$fontWeight : "normal")};
   text-transform: ${(props) => (props.$uppercase ? "uppercase" : "none")};
   letter-spacing: ${(props) =>
     props.$letterSpacing ? props.$letterSpacing : "normal"};
@@ -164,7 +168,7 @@ export const Typography = styled.p`
 
     .icon {
     &.-danger {
-      color: ${colors.danger2};
+      color: ${(props) => props.theme.colors.danger2};
     }
   }
 

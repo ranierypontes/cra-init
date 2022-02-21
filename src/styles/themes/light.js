@@ -2,26 +2,39 @@ const light = {
   title: "light",
 
   colors: {
-    bg: "#EEF0F6",
+    transparent: "transparent",
+    white: "#FFFFFF",
+    black: "#000000",
 
-    light: "#fff",
-    primary: "#f00", // blue
-    bgLight: "#F9FAFF",
-    bgMedium: "#EEF0F7",
-    gray: "#BCC2D3", // gray
-    darkGray: "#384152",
-    lightGray: "#D6DBEA",
-    textColor: "#161C2E",
-    black: "#000",
-    color1: "#F6A02A", // orange
-    color2: "#16C76F", // green
-    color3: "#E34949", // red
-    color4: "#EBEEFF", // light blue
-    color5: "#1F3EDF", // light blue
-    color6: "#16C76F", // dark green
-    color7: "#B5FAD8", // light green
-    color8: "#8E919C", // light gray
-    grayscale5: "#888888",
+    bgWhite: "#FFFFFF",
+    textDefault: "#15181E",
+
+    gray1: "#F1F4F4",
+    gray2: "#EAEAEA",
+    gray3: "#E3E6F0",
+    gray4: "#969696",
+    gray5: "#6A6A6A",
+    gray6: "#505050",
+    gray7: "#1B1B1B",
+
+    c1: "#345CCB",
+    c2: "#4C7BFF",
+    c3: "#0D1733",
+    c4: "#15181E",
+    c5: "#7A869F",
+    c6: "#1F232B",
+    c7: "#353C4A",
+    c8: "#97A1B4",
+    c9: "#4B5468",
+
+    success: "#00E676",
+    success2: "#22B26C",
+    danger: "#D50723",
+    danger2: "#FF3D00",
+    info: "#4C7BFF",
+    warning: "#F6AC21",
+    warning2: "#DFBA59",
+    warning3: "#FFF3CD",
   },
 };
 

@@ -2,7 +2,7 @@ import styled, { css } from "styled-components";
 // import { rgba } from "polished";
 
 import { colors } from "../../../styles/settings/colors";
-import { typography } from "../../../styles/settings/typography";
+// import { typography } from "../../../styles/settings/ttypography";
 // import { breakpoints, sizes } from "../../../styles/settings/breakpoints";
 
 const CardDefault = styled.div`
@@ -27,7 +27,7 @@ const CardDefault = styled.div`
   .c-title {
     text-transform: uppercase;
     color: ${colors.white};
-    font-size: ${typography.extraSmaller};
+    font-size: ${(props) => props.theme.fontSize.extraSmaller};
     letter-spacing: 0.5px;
     margin-bottom: 8px;
     line-height: 1.3;

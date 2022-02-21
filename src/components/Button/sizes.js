@@ -1,6 +1,5 @@
 import { css } from "styled-components";
 // import { colors } from "../../styles/settings/colors";
-import { typography } from "../../styles/settings/typography";
 // import { lighten, darken } from "polished";
 
 const buttonSizes = {
@@ -10,7 +9,9 @@ const buttonSizes = {
     letter-spacing: ${(props) =>
       props.$letterSpacing ? props.$letterSpacing : "0.5px"};
     font-size: ${(props) =>
-      props.uppercase ? typography.smaller : typography.default};
+      props.uppercase
+        ? props.theme.fontSize.smaller
+        : props.theme.fontSize.default};
 
     .icon {
       width: 16px;
@@ -23,7 +24,9 @@ const buttonSizes = {
     letter-spacing: ${(props) =>
       props.$letterSpacing ? props.$letterSpacing : "0.2px"};
     font-size: ${(props) =>
-      props.uppercase ? typography.superSmaller : typography.extraSmaller};
+      props.uppercase
+        ? props.theme.fontSize.superSmaller
+        : props.theme.fontSize.extraSmaller};
 
     .icon {
       width: 14px;
@@ -36,7 +39,9 @@ const buttonSizes = {
     letter-spacing: ${(props) =>
       props.$letterSpacing ? props.$letterSpacing : "0.3px"};
     font-size: ${(props) =>
-      props.uppercase ? typography.extraSmaller : typography.smaller};
+      props.uppercase
+        ? props.theme.fontSize.extraSmaller
+        : props.theme.fontSize.smaller};
 
     .icon {
       width: 16px;
@@ -49,7 +54,9 @@ const buttonSizes = {
     letter-spacing: ${(props) =>
       props.$letterSpacing ? props.$letterSpacing : "0.5px"};
     font-size: ${(props) =>
-      props.uppercase ? typography.default : typography.medium};
+      props.uppercase
+        ? props.theme.fontSize.default
+        : props.theme.fontSize.medium};
 
     .icon {
       width: 19px;
@@ -62,7 +69,9 @@ const buttonSizes = {
     letter-spacing: ${(props) =>
       props.$letterSpacing ? props.$letterSpacing : "0.5px"};
     font-size: ${(props) =>
-      props.uppercase ? typography.medium : typography.large};
+      props.uppercase
+        ? props.theme.fontSize.medium
+        : props.theme.fontSize.large};
 
     .icon {
       width: 22px;

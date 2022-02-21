@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 import { colors } from "../../../styles/settings/colors";
 import { breakpoints, sizes } from "../../../styles/settings/breakpoints";
-import { typography } from "../../../styles/settings/typography";
+// import { typography } from "../../../styles/settings/ttypography";
 
 import { FormDefault } from "../Default";
 
@@ -10,7 +10,7 @@ export const Form = styled(FormDefault)`
   .form-group {
     .link {
       color: ${colors.c1};
-      font-size: ${typography.smaller};
+      font-size: ${(props) => props.theme.fontSize.smaller};
       font-weight: normal;
 
       &:hover {
@@ -36,7 +36,7 @@ export const Form = styled(FormDefault)`
         line-height: 1.3;
         text-align: center;
         font-weight: 300;
-        font-size: ${typography.smaller};
+        font-size: ${(props) => props.theme.fontSize.smaller};
         margin-left: auto;
         margin-right: auto;
         @media ${breakpoints.lessThan(sizes.phone)} {
